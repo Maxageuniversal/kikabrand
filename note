@@ -1,0 +1,170 @@
+E-commerce Web Application for Beads by Kika (Using PHP Laravel)
+
+Start Page & Branding:
+
+Splash Screen: A purple splash screen with a rounded logo centered, with a shadowed background. Below this is the slogan: "Wear It Like the Queen That You Are".
+
+AI Personalized Branding: Dynamic adjustment of taglines and homepage imagery based on the shopper’s history and preferences.
+AI-driven Features:
+
+Personalized Recommendations:
+AI-Based Product Suggestions: Implement AI algorithms to analyze user behavior, preferences, and past purchases to recommend similar products, bundles, and personalized collections.
+Frequently Bought Together: Automatically suggest related products based on the browsing history of other shoppers.
+
+Virtual Shopping Assistant:
+An AI-powered chatbot that helps users navigate the site, answer questions about products, assist with checkout, and make recommendations based on their preferences and shopping habits.
+
+AI Chat Support:
+Live Chat Assistance with AI: Integrate a smart chatbot that provides real-time responses for FAQs and handover to human support if required.
+AI Sentiment Analysis: AI detects customer sentiment during chat conversations and automatically escalates issues that seem urgent or frustrating to human agents.
+
+Admin and Staff Management:
+Staff Account Management: Super admin sets privileges for staff accounts to manage the entire website, including:
+Product Management: Picture and video uploads, selecting colors with a color picker.
+Inventory Management: Low-stock alerts to staff, auto-ordering options for suppliers based on stock levels.
+Customer Profiles: AI-driven segmentation of customer data for targeted marketing campaigns.
+Order & Review Management: Automated responses for common reviews, flagging negative reviews for immediate action.
+Flash Sale Notifications: AI predicts the best times for flash sales based on customer traffic data.
+
+Shipment Tracking:
+Both shoppers and admin accounts can track shipment statuses:
+Admin View: Status includes "Item Accepted by Courier", "Item Rejected by Courier", "Item Shipped" "Item Collected by Shopper".
+Customer View: Status includes "Item Collected by Shopper".
+Both admins and user Parcel Analytics: Advanced shipment analysis showing real-time delivery metrics, delays, and customer satisfaction rates.
+
+Homepage and Product Display:
+Dynamic Homepage: AI dynamically adjusts featured products, homepage content, and banners based on the user's previous visits and preferences.
+Product Display with Smart Filtering: Customers can use AI-powered filters to search by color, style, or even upload an image to find similar products.
+
+Personalized Shopping Experience:
+AI Behavioral Analysis: Uses machine learning to study customer browsing, shopping patterns, and adapt product placements or promotions.
+Wish List Prediction: Predicts items a user may want to add to their wish list based on past activities and interactions.
+
+Voice Search Integration:
+Integrate voice search to allow users to easily find products by speaking, using AI to interpret the voice commands effectively.
+
+AR Try-On Feature:
+Use Augmented Reality to allow shoppers to visualize how jewelry will look on them before purchasing. This can be particularly beneficial for beads and necklaces, giving users a virtual fitting room experience.
+
+Guest Checkout with AI Optimization:
+One-Click Checkout: AI streamlines the checkout process by pre-filling details for returning customers based on cookies and previous orders.
+Coupon Recommendations: AI recommends the best coupon available based on cart value and customer history to enhance conversion.
+
+Currency Conversion:
+Automatically adjust currency based on user location or preferences, ensuring a localized and seamless experience.
+
+Customer Support and Retention:
+AI-Powered Customer Retention: Automated follow-ups for abandoned carts, personalized re-engagement emails with discounts for frequently viewed products.
+Birthday and Special Occasion Automation: AI identifies significant events (like birthdays) and sends personalized offers or messages.
+
+Cart Abandonment and Recovery:
+Cart Abandonment Notifications: Automatically notify customers via email, push notification, or text if they abandon items in their cart, including time-sensitive discounts to encourage conversion.
+Product Review & Feedback System:
+
+Smart Reviews: AI analyses product reviews to identify common themes and sentiment, displaying this information for potential customers.
+Review Reminders: After a purchase, users are automatically reminded to leave a review, with AI drafting suggested review text for a quicker response.
+
+Dynamic Pricing & Discounts:
+AI can adjust pricing in real-time based on user demand, competitor prices, or inventory levels. It can also determine which customers are more likely to need a discount to convert.
+
+Theme and Design:
+Color Combination: The theme follows a combination of purple, grey, and white, with black fonts:
+60% Darker Colors for the background. (dominant)
+30% Secondary Areas for other small sections. (complement)
+10% Action Buttons for key interactions. (accent)
+
+Admin section carries the following
+Advanced Analytics:
+Sales Insights: AI provides insights on best-selling products, customer preferences, and effective marketing campaigns.
+Predictive Analytics: Predict future trends in customer behavior, assisting in inventory management and product launches.
+
+Deployment:
+
+The web application will be deployed using GitHub Pages with the newly purchased domain, beadsbykika.com.
+Security and Fraud Detection:
+
+AI Fraud Detection: Real-time fraud monitoring using machine learning to identify suspicious activity and prevent fraudulent transactions.
+Two-Factor Authentication (2FA): Ensure secure access to admin and staff accounts using 2FA.
+SEO and Marketing Automation:
+
+AI SEO Optimization: Use AI to optimize page metadata, product descriptions, and keyword placements to improve search engine ranking.
+Automated Email Campaigns: Use AI to trigger automated emails for upselling, cart abandonment, and product announcements, tailored to individual user behavior.
+Social Media Integration:
+
+Social Proof Integration: Show real-time notifications when customers purchase products, to add an element of urgency and trust.
+Social Sharing: Enable users to share products and wish lists directly on social media platforms for increased reach.
+
+
+Overall Technology Stack:
+
+Backend:
+PHP Laravel: Main framework for building the backend.
+
+Database:
+PostgreSQL: Free, open-source relational database.
+
+AI Integration:
+Python: For machine learning tasks, using libraries like scikit-learn, TensorFlow, and NLTK for various models and AI functions.
+Hugging Face Transformers API (free tier): For natural language processing tasks.
+Dialogflow (Free tier for conversational AI): For chatbots and virtual shopping assistant features.
+
+AR and Voice Search:
+AR.js: An open-source library for adding AR functionality.
+Web Speech API: For voice recognition and synthesis, built directly into modern browsers.
+
+Chatbot & Virtual Assistant:
+Rasa Open Source: To build custom chatbots integrated into Laravel.
+Dialogflow (Free tier): A simpler integration for chatbot or shopping assistant.
+
+Payment Gateway:
+Flutterwave: Integrate with Laravel for handling payments. The basic version is free, and charges are per transaction.
+
+Customer Retention & Engagement:
+Sendinblue (Free tier up to 300 emails/day): For email marketing, welcome messages, cart abandonment reminders, and promotional emails.
+Mautic (Open-source marketing automation): To manage email campaigns and customer retention strategies.
+
+Deployment:
+GitHub Pages: For deploying the static portions of the website.
+Railway (Free tier): For deploying the backend and dynamic API of the Laravel application. Railway offers a generous free tier that can handle server-side processing.
+Vercel or Render (Free tier): Alternatives for hosting the dynamic backend if needed.
+
+Dynamic Currency Conversion:
+Currency Converter API (Free tier): To dynamically change currencies based on the user's location.
+Open Exchange Rates API (Free tier): Another option for basic currency conversion needs.
+
+Cart Abandonment and Recovery:
+Laravel: Use built-in features and send reminders through Sendinblue.
+
+Analytics and Tracking:
+Matomo (Open-source, self-hosted analytics): For monitoring user behavior and providing insights.
+Google Analytics (Free): Track website traffic, though with potential privacy concerns.
+
+SEO Tools:
+Ahrefs Webmaster Tools (Free): For basic SEO analysis and keyword tracking.
+Lighthouse: A free tool for performance and SEO audits, available in Chrome DevTools.
+
+Security:
+Laravel Sanctum: For handling API token authentication.
+Laravel Fortify: To implement two-factor authentication.
+Messaging and Notification Services:
+Pusher (Free tier): For real-time notifications, such as user account Changes, chat or order status updates.
+OneSignal (Free tier): For push notifications for cart abandonment or promotional messages.
+
+Social Media Integration:
+Facebook Graph API and Twitter API (both free with limitations): For social media login and content sharing.
+
+AR Try-On & Visual Elements:
+Three.js: An open-source 3D JavaScript library that can be used for creating AR-like experiences on the web.
+AR.js: To provide AR features using users' devices.
+
+
+Notes:
+The free services are suitable for MVP (Minimum Viable Product) development. However, as user traffic grows, we may need to switch to more scalable, paid services.
+Hosting the machine learning models and services might require careful planning regarding the limits of free-tier services.
+Railway and Vercel can manage the backend needs initially but may need upgrades to handle high traffic.
+With these free tools and services, we can achieve an advanced e-commerce web application while keeping costs minimal.
+
+
+
+
+background-color: rgb(68 1 106 / 22%);
