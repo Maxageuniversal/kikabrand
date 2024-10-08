@@ -1,18 +1,20 @@
 <?php
-
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\Auth; // Import the Auth facade
-use App\Http\Controllers\HomeController; // Ensure the HomeController is imported
 
 // Route for the root (index) page
 Route::get('/', function () {
-    return view('index'); // Ensure this view file exists in resources/views
+    return view('index');
 });
 
 // Authentication routes
-Auth::routes();
+// ... (define your custom authentication routes if needed)
 
 // Route for the home page (same content as index)
 Route::get('/home', function () {
-    return view('index'); // Same view as the root
+    return view('index');
 })->name('home');
+
+// Routes for checkout and order tracking
+Route::get('/checkout', 'CheckoutController@checkout')->name('checkout');
+Route::post('/place-order', 'CheckoutController@placeOrder')->name('place.order');
+Route::get('/track-order', 'CheckoutController@trackOrder')->name('track.order');
