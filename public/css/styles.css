@@ -3,9 +3,30 @@ body {
     margin: 0;
         font-family: "Cinzel Decorative", serif;
         font-style: normal;
-      
+
     overflow: hidden; /* Disable scrolling during splash screen */
 }
+/* Add this to your CSS */
+.splash-logo {
+    animation: pop-in 1.5s ease-in-out infinite; /* Repeat infinitely */
+    opacity: 0;
+}
+
+@keyframes pop-in {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
 
 #splash-screen {
     display: flex;

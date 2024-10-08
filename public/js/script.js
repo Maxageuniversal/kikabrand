@@ -1,9 +1,17 @@
+window.addEventListener('load', function() {
+    setTimeout(function() {
+        document.getElementById('splash-screen').style.display = 'none'; // Hide the splash screen
+    }, 5000); // Adjust the time (5000ms = 5 seconds)
+});
+
+
+
 function toggleMenu() {
     const header = document.getElementById('header');
     header.classList.toggle('menu-open');
 }
 
-    
+
     function toggleMobileMenu() {
         var mobileMenu = document.getElementById('mobile-menu');
         if (mobileMenu.style.display === "block") {
@@ -19,7 +27,7 @@ function openModal(product, imagePath) {
     const modal = document.getElementById("colorModal");
     const colorOptions = document.getElementById("colorOptions");
     const productImage = document.getElementById("productImage");
-    
+
     // Set product image
     productImage.src = imagePath;
 
