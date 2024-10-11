@@ -1,0 +1,23 @@
+version: "1"
+services:
+  - type: web
+    name: beadsbykika
+    plan: free
+    runtime: "docker"  # Make sure this runtime is correct for your service
+    envVars:  # Correctly formatted as an array of objects
+      - key: APP_ENV
+        value: local
+      - key: APP_KEY
+        value: base64:yPu8r2SlhqbiY3gQxTfRWIYz6nRCRHVhIPsU/AZL4hk=
+      - key: DB_CONNECTION
+        value: mysql
+      - key: DB_HOST
+        value: your-db-host  # Replace with your actual DB host
+      - key: DB_PORT
+        value: "3306"  # Keep this as a string
+      - key: DB_DATABASE
+        value: beadsbykika_db
+      - key: DB_USERNAME
+        value: Maxwell
+      - key: DB_PASSWORD
+        value: Maxwell649  # Ensure no trailing period here
