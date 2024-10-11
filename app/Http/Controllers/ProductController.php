@@ -1,21 +1,37 @@
 <?php
+// app/Http/Controllers/ProductController.php
 namespace App\Http\Controllers;
 
 use App\Models\Product;
 use Illuminate\Http\Request;
 
-class ProductController extends Controller
-{
-    public function index()
-    {
-        $products = Product::all();
-        return view('products.index', compact('products'));
+class ProductController extends Controller {
+    // Get all products
+    public function index() {
+        return response()->json(Product::all());
     }
 
-    public function show(Product $product)
-    {
-        return view('products.show', compact('product'));
+    // Create a product
+    public function store(Request $request) {
+        $product = Product::create($request->all());
+        return response()->json($product, 201);
     }
 
-    // ... other methods for creating, editing, and deleting products
+    // Get a single product by ID
+    public function show($id) {
+        return response()->json(Product::findOrFail($id));
+    }
+
+    // Update a product
+    public function update(Request $request, $id) {
+        $product = Product::findOrFail($id);
+        $product->update($request->all());
+        return response()->json($product, 200);
+    }
+
+    // Delete a product
+    public function destroy($id) {
+        Product::destroy($id);
+        return response()->json(null, 204);
+    }
 }

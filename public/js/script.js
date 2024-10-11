@@ -1,7 +1,7 @@
 window.addEventListener('load', function() {
     setTimeout(function() {
         document.getElementById('splash-screen').style.display = 'none'; // Hide the splash screen
-    }, 5000); // Adjust the time (5000ms = 5 seconds)
+    }, 3000); // Adjust the time (5000ms = 5 seconds)
 });
 
 
@@ -101,5 +101,5 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById('home-page').style.display = 'block';
         // Enable scrolling once the home page is visible
         document.body.style.overflow = 'auto';
-    }, 4000); // 3 seconds delay
+    }, 3000); // 3 seconds delay
 });

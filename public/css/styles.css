@@ -8,7 +8,7 @@ body {
 }
 /* Add this to your CSS */
 .splash-logo {
-    animation: pop-in 1.5s ease-in-out infinite; /* Repeat infinitely */
+    animation: pop-in 1.5s ease-in-out forwards; /* Repeat infinitely */
     opacity: 0;
 }
 
@@ -345,6 +345,20 @@ h2 {
     font-size: 28px;
     font-weight: bold;
 }
+
+/* General rule for making all images responsive */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Modal-specific responsive image styling */
+.modal-content img {
+    width: 100%;  /* Make image take up the full width of the modal */
+    height: auto; /* Maintain aspect ratio */
+}
+
 
 
 .product-image {

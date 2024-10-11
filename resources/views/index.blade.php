@@ -6,9 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
     <script src="{{ asset('js/script.js') }}"></script>
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
     </style>
@@ -92,6 +90,26 @@
             <div class="category-item">Bracelets</div>
         </div>
     </section>
+
+    <!-- Modal Structure -->
+    <div id="colorModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="productImage" alt="Product Image" />
+            <div id="colorOptions"></div>
+            <button onclick="buyNow()">Buy Now</button>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+    </div>
+
+    <!-- Image Modal Structure -->
+    <div id="imageModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close" onclick="closeImageModal()">&times;</span>
+            <img id="largeProductImage" alt="Large Product Image" />
+        </div>
+    </div>
+
 
     <!-- Product Recommendations -->
     <section class="Rproduct">

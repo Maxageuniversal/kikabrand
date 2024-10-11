@@ -1,5 +1,14 @@
 <?php
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+class ProductController extends Controller
+{
+    // Your controller methods here
+}
 use Illuminate\Support\Facades\Route;
+
 
 // Route for the root (index) page
 Route::get('/', function () {
@@ -18,3 +27,4 @@ Route::get('/home', function () {
 Route::get('/checkout', 'CheckoutController@checkout')->name('checkout');
 Route::post('/place-order', 'CheckoutController@placeOrder')->name('place.order');
 Route::get('/track-order', 'CheckoutController@trackOrder')->name('track.order');
+Route::resource('products', ProductController::class);
