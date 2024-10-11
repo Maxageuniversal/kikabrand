@@ -98,7 +98,7 @@
             <img id="productImage" alt="Product Image" />
             <div id="colorOptions"></div>
             <button onclick="buyNow()">Buy Now</button>
-            <button onclick="addToCart()">Add to Cart</button>
+            <button onclick="addToCart()">to Cart</button>
         </div>
     </div>
 
@@ -144,5 +144,18 @@
         <p>Customer Support | Social Media | Newsletter Signup | Contact Us | About Us</p>
     </footer>
 </body>
+<script>
+    // JavaScript for Voice Search
+
+    const recognition = new webkitSpeechRecognition();
+    recognition.onresult = function(event) {
+        const query = event.results[0][0].transcript;
+        // Send 'query' to your backend to search products
+    };
+
+    document.getElementById('voiceSearchBtn').onclick = function() {
+        recognition.start();
+    };
+</script>
 
 </html>

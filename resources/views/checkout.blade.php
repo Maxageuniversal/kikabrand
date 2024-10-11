@@ -30,6 +30,36 @@
         </form>
     </section>
 
+    <!-- resources/views/checkout.blade.php -->
+    <script src="https://checkout.flutterwave.com/v3.js"></script>
+
+    <button type="button" onClick="makePayment()">Pay Now</button>
+
+    <script>
+        function makePayment() {
+            FlutterwaveCheckout({
+                public_key: "FLWPUBK_TEST-xxxx",
+                tx_ref: "unique_ref",
+                amount: 5000,
+                currency: "NGN",
+                payment_options: "card",
+                customer: {
+                    email: "customer@example.com",
+                    phonenumber: "08102909304",
+                    name: "John Doe",
+                },
+                callback: function(data) {
+                    console.log(data);
+                    // Handle response here
+                },
+                customizations: {
+                    title: "Beads by Kika",
+                    description: "Payment for items in cart",
+                },
+            });
+        }
+    </script>
+
 </body>
 
 </html>

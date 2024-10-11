@@ -1,3 +1,5 @@
+
+
 window.addEventListener('load', function() {
     setTimeout(function() {
         document.getElementById('splash-screen').style.display = 'none'; // Hide the splash screen

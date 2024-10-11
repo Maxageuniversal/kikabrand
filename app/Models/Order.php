@@ -9,10 +9,6 @@ class Order extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'name',
-        'email',
-        'shipping_address',
-        'status', // Add other order details as needed
-    ];
+protected $fillable = ['user_id', 'status', 'tracking_number', 'carrier'];
+
 }

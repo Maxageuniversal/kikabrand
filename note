@@ -94,7 +94,6 @@ Social Media Integration:
 Social Proof Integration: Show real-time notifications when customers purchase products, to add an element of urgency and trust.
 Social Sharing: Enable users to share products and wish lists directly on social media platforms for increased reach.
 
-
 Overall Technology Stack:
 
 Backend:
@@ -157,15 +156,11 @@ AR Try-On & Visual Elements:
 Three.js: An open-source 3D JavaScript library that can be used for creating AR-like experiences on the web.
 AR.js: To provide AR features using users' devices.
 
-
 Notes:
 The free services are suitable for MVP (Minimum Viable Product) development. However, as user traffic grows, we may need to switch to more scalable, paid services.
 Hosting the machine learning models and services might require careful planning regarding the limits of free-tier services.
 Railway and Vercel can manage the backend needs initially but may need upgrades to handle high traffic.
 With these free tools and services, we can achieve an advanced e-commerce web application while keeping costs minimal.
-
-
-
 
 background-color: rgb(68 1 106 / 22%);
 
@@ -173,12 +168,8 @@ git add .
 git commit -m "Updated website"
 git push
 
-
 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
 
 (Mysql)
 Maxwell
 Maxwell649.
-
-
-
