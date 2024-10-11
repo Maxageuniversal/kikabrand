@@ -1,31 +1,34 @@
-# Use the official PHP image from Docker Hub
-FROM php:8.1-fpm
+# Use PHP 8.2 as base image
+FROM php:8.2-cli
 
-# Set the working directory inside the container
+# Set working directory
 WORKDIR /var/www
 
 # Install dependencies
-COPY composer.lock composer.json ./
 RUN apt-get update && apt-get install -y \
-    libpng-dev \
-    libjpeg-dev \
-    libfreetype6-dev \
-    && docker-php-ext-configure gd --with-freetype --with-jpeg \
-    && docker-php-ext-install gd \
-    && docker-php-ext-install pdo pdo_mysql \
-    && apt-get clean
+    libzip-dev \
+    unzip \
+    && docker-php-ext-install zip pdo pdo_mysql \
+    && curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
-# Install Composer
-RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+# Add a non-root user
+RUN useradd -m appuser
+USER appuser
 
-# Copy the rest of the application code
-COPY . .
+# Set the Composer home environment variable
+ENV COMPOSER_HOME=/home/appuser/.composer
+
+# Copy the application code and change ownership
+COPY --chown=appuser:appuser . .
+
+# Copy the composer files
+COPY --chown=appuser:appuser composer.json composer.lock ./
 
 # Install PHP dependencies
-RUN composer install --no-dev --optimize-autoloader
+RUN composer install --no-dev --optimize-autoloader -vvv
 
-# Expose the port on which your application will run
-EXPOSE 9000
+# Expose port
+EXPOSE 8000
 
-# Start the PHP FastCGI Process Manager
-CMD ["php-fpm"]
+# Start the PHP development server
+CMD ["php", "-S", "0.0.0.0:8000", "-t", "public"]
